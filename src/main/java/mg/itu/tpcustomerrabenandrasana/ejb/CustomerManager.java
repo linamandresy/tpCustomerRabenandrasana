@@ -9,7 +9,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
 import java.util.List;
-import mg.itu.tpcustomerrabenandrasana.Customer;
+import mg.itu.tpcustomerrabenandrasana.entity.Customer;
 
 /**
  * Gestion des operation de base de donnée de la classe customer
