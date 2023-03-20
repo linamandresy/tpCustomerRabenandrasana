@@ -11,9 +11,11 @@ import java.io.Serializable;
 import java.util.List;
 import mg.itu.tpcustomerrabenandrasana.ejb.CustomerManager;
 import mg.itu.tpcustomerrabenandrasana.ejb.DiscountManager;
+import mg.itu.tpcustomerrabenandrasana.ejb.MicroMarketManager;
 
 import mg.itu.tpcustomerrabenandrasana.entity.Customer;
 import mg.itu.tpcustomerrabenandrasana.entity.Discount;
+import mg.itu.tpcustomerrabenandrasana.entity.MicroMarket;
 
 /**
  *
@@ -30,6 +32,8 @@ public class CustomerDetailsBean implements Serializable {
     private CustomerManager customerManager;
     @EJB
     private DiscountManager discountManager;
+    @EJB 
+    private MicroMarketManager microMarketManager;
 
     public int getIdCustomer() {
         return idCustomer;
@@ -72,6 +76,13 @@ public class CustomerDetailsBean implements Serializable {
         return discountManager.getAllDiscounts();
     }
 
+    /**
+     * Retourne la liste de tous les micro markets
+     * @return 
+     */
+    public List<MicroMarket> getMicroMarkets(){
+        return microMarketManager.getAllMicroMarket();
+    }
     /**
      * Creates a new instance of CustomerDetailsBean
      */
